@@ -38,8 +38,8 @@ const Promos = () => {
                                     <span className="text-white lg:text-xl text-md w-fit bg-purple p-2 rounded-full">{promo.subtitle}</span>
                                     <h2 className="text-white lg:text-4xl text-2xl font-bold uppercase">{promo.title}</h2>
                                 </div>
-                                <a href={`#slide${index + 1}`} className="absolute  lg:top-40 top-28 right-4  text-gray-300 p-2 text-4xl"><IoIosArrowForward /></a>
-                                <a href={`#slide${index - 1}`} className="absolute  lg:top-40 top-28 left-4  text-gray-300 p-2 text-4xl"><IoIosArrowBack /></a>
+                                <a href={`#slide${index + 1}`} className="absolute  lg:top-32 top-28 right-4  text-gray-300 p-2 text-4xl"><IoIosArrowForward /></a>
+                                <a href={`#slide${index - 1}`} className="absolute  lg:top-32 top-28 left-4  text-gray-300 p-2 text-4xl"><IoIosArrowBack /></a>
                         </div>
                     </div>
                 )  
