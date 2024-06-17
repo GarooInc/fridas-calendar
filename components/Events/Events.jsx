@@ -49,7 +49,7 @@ const Events = () => {
                                 <h2 className="lg:text-6xl text-4xl font-bold text-purple">{event.date < 10 ? `0${event.date}` : event.date}</h2>
                             </div>
                             <div className="w-[40%] lg:w-[35%]">
-                                <h3 className="lg:text-4xl text-lg font-bold text-black text-start m-0">{event.title}</h3>
+                                <h3 className="lg:text-4xl text-md font-bold text-black text-start pr-4 lg:p-0">{event.title}</h3>
                             </div>
                             <div className="w-[40%] lg:w-[35%] md:justify-end flex relative">
                                 <img src={`https://dev.garooinc.com/fridas/api/files/${event.collectionId}/${event.id}/${event.picture}?token=`} alt={event.title} className="lg:w-60 lg:h-60 w-40 h-40 object-cover" />
