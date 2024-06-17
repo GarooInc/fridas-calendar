@@ -23,7 +23,7 @@ export default function Home() {
           <Events />
         </div>
       </div>
-      <div className="sticky bottom-0 w-full bg-purple flex flex-col justify-center items-center p-4">
+      <div className="sticky bottom-0 w-full bg-purple flex flex-col justify-center items-center p-4 hover:bg-hotpink cursor-pointer">
         <h2 className="lg:text-xl text-lg font-bold text-white uppercase">Reservaciones</h2>
         <div className="flex justify-center items-center gap-2">
           <IoLogoWhatsapp className="lg:text-md text-sm text-white" />
