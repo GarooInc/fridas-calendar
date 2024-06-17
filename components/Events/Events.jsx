@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react'
 import PocketBase from 'pocketbase'
 import { IoTimeOutline } from "react-icons/io5";
 import { FaLocationDot } from "react-icons/fa6";
-const Events = () => {
-    const [events, setEvents] = useState([]);
 
+const Events = ({ start, count }) => {
+    const [events, setEvents] = useState([]);
 
     const pb = new PocketBase('https://dev.garooinc.com/fridas')
     pb.autoCancellation(false);
@@ -26,21 +26,13 @@ const Events = () => {
         fetchData()
     }, []);
 
+    const eventsToShow = events.slice(start, start + count);
 
     return (
         <div>
         {
-            events.map((event, index) => {
-                {
-                    return event.banner ? (
-                        <div key={index} className="flex justify-center items-start relative border-t-2 border-black">
-                            <img src={`https://dev.garooinc.com/fridas/api/files/${event.collectionId}/${event.id}/${event.picture}?token=`} alt={event.title} className="w-full h-60 lg:h-80 object-cover brightness-50" />
-                            <div className="absolute bottom-4 left-4 flex flex-col gap-2 lg:w-full w-2/3">
-                                <span className="text-white lg:text-xl text-md">{event.subtitlebanner}</span>
-                                <h2 className="text-white lg:text-4xl text-2xl font-bold uppercase">{event.titlebanner}</h2>
-                            </div>
-                        </div>
-                    ) : (
+            eventsToShow.map((event, index) => {
+                    return (
                         <div key={index} className="flex justify-center items-start p-4 relative border-t-2 border-black">
                             <div className="flex flex-col lg:w-[30%] w-[20%] justify-center items-start relative">
                                 <span className="lg:text-xl text-md font-bold text-gray-500 ">{event.weekday}</span>
@@ -65,8 +57,6 @@ const Events = () => {
                             </div>
                         </div>
                     )
-
-            }
             }
             )
         }

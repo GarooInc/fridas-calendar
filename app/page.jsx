@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "@/components/NavBar/Navbar";
 import Events from "@/components/Events/Events";
 import { IoLogoWhatsapp } from "react-icons/io5";
+import Promos from "@/components/Promos/Promos";
 
 
 export default function Home() {
@@ -20,7 +21,9 @@ export default function Home() {
               <span className="lg:text-4xl text-2xl font-bold text-gray-500">2024</span>
             </div>
           </div>
-          <Events />
+          <Events start={0} count={1}/>
+          <Promos />
+          <Events start={1} count={Infinity}/>
         </div>
       </div>
       <div className="sticky bottom-0 w-full bg-purple flex flex-col justify-center items-center p-4 hover:bg-hotpink cursor-pointer">
