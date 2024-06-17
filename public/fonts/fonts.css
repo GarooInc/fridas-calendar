@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "gotham";
+    src: url('./Gotham_Book.otf') format('opentype');
+}
+
+@font-face {
+    font-family: "kimmy";
+    src: url('./Kimmy_Design_-_Bakewell_Medium_Narrow.otf') format('opentype');
+}
+
+
