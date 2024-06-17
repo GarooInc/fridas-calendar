@@ -3,8 +3,6 @@ import React, { useEffect, useState } from 'react'
 import PocketBase from 'pocketbase'
 import { IoTimeOutline } from "react-icons/io5";
 import { FaLocationDot } from "react-icons/fa6";
-import { split } from 'postcss/lib/list';
-
 const Events = () => {
     const [events, setEvents] = useState([]);
 
